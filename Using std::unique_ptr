@@ -1,0 +1,17 @@
+#include <iostream>
+#include <memory>
+
+class MyClass {
+public:
+    void display() {
+        std::cout << "This is MyClass." << std::endl;
+    }
+};
+
+int main() {
+    std::unique_ptr<MyClass> ptr(new MyClass());
+
+    ptr->display();
+
+    return 0;
+}
